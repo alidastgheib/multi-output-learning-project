@@ -1,0 +1,500 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0046)http://mulan.sourceforge.net/datasets-mlc.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/mulan.dwt" codeOutsideHTMLIsLocked="false" --><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>multilabel datasets</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+<link href="./Multi-label classification datasets_files/mulan.css" rel="stylesheet" type="text/css">
+<style></style></head>
+
+<body>
+<table width="1000" border="0" align="center" cellpadding="5" cellspacing="0" bgcolor="#F2F3F8" class="mainTable">
+  <tbody><tr>
+    <td align="center" bgcolor="#663200" class="mainContent"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tbody><tr>
+        <td><a href="http://mulan.sourceforge.net/index.html"><img src="./Multi-label classification datasets_files/logo.png" alt="Mulan logo" width="224" height="108" border="0"></a></td>
+        <td width="100%" align="center" class="mulanTitle">Mulan<span class="style6">:</span> A Java Library for Multi-Label Learning</td>
+      </tr>
+    </tbody></table>      </td>
+  </tr>
+  <tr>
+    <td class="menu">[<a href="http://mulan.sourceforge.net/index.html" class="menu">Home</a>] - [<a href="http://mulan.sourceforge.net/download.html" class="menu">Getting Mulan</a>] - [<a href="http://mulan.sourceforge.net/documentation.html" class="menu">Documentation</a>] -  [<a href="http://mulan.sourceforge.net/datasets.html" class="menu">Datasets</a>]  - [<a href="http://mulan.sourceforge.net/members.html" class="menu">The Team</a>]</td>
+  </tr>
+  <tr>
+    <td class="mainContent">
+	<!-- InstanceBeginEditable name="Main" -->
+      <h1><strong><strong>D</strong><strong>atasets</strong></strong></h1>
+      <p>The following multi-label datasets are properly formatted for use with Mulan. We initially provide a table with dataset statistics, followed by the actual files and sources. </p>
+      <!-- <p>Recently we extended Mulan for multi-target regression. This <a href="datasets-mtr.html" class="menu">Home</a> contains multi-target regression datasets in the format of Mulan!</p> -->
+      <h2>Statistics</h2>
+
+<div align="left">
+  <table border="0" cellpadding="2" cellspacing="1" width="200" style="font-size:0.9em">
+          <tbody>
+            <tr style="background-color:#D4F8BC">
+              <td nowrap="nowrap">&nbsp;</td>
+              <td align="center" nowrap="nowrap">&nbsp;</td>
+              <td nowrap="nowrap">&nbsp;</td>
+              <td colspan="2" align="center" nowrap="nowrap">&nbsp;<strong>attributes</strong></td>
+              <td align="center" nowrap="nowrap"></td>
+              <td nowrap="nowrap"><strong>&nbsp;</strong></td>
+              <td nowrap="nowrap"><strong>&nbsp;</strong></td>
+              <td nowrap="nowrap"><strong>&nbsp;</strong></td>
+            </tr>
+            <tr style="background-color:#D4F8BC">
+              <td nowrap="nowrap"><strong>name</strong></td>
+              <td align="center" nowrap="nowrap"><strong>domain</strong></td>
+              <td align="center" nowrap="nowrap"><strong>instances</strong></td>
+              <td align="center" nowrap="nowrap"><strong>nominal</strong></td>
+              <td align="center" nowrap="nowrap"><strong>numeric</strong></td>
+              <td align="center" nowrap="nowrap"><strong>labels</strong></td>
+              <td align="center" nowrap="nowrap"><strong>cardinality</strong></td>
+              <td align="center" nowrap="nowrap"><strong>density</strong></td>
+              <td align="center" nowrap="nowrap"><strong>distinct </strong></td>
+            </tr>
+            <tr style="background-color:#f7f7f7">
+              <td nowrap="nowrap">bibtex</td>
+              <td align="center" nowrap="nowrap">text</td>
+              <td align="right" nowrap="nowrap">7395</td>
+              <td align="right" nowrap="nowrap">1836</td>
+              <td align="right" nowrap="nowrap">0</td>
+              <td align="right" nowrap="nowrap">159</td>
+              <td align="right" nowrap="nowrap">2.402</td>
+              <td align="right" nowrap="nowrap">0.015</td>
+              <td align="right" nowrap="nowrap">2856</td>
+            </tr>
+            <tr style="background-color:#f0f0f0">
+              <td nowrap="nowrap">birds
+			  <img alt="new dataset" height="11" src="./Multi-label classification datasets_files/new2.gif" width="28"></td>
+              <td align="center" nowrap="nowrap">audio</td>
+              <td align="right" nowrap="nowrap">645</td>
+              <td align="right" nowrap="nowrap">2</td>
+              <td align="right" nowrap="nowrap">258</td>
+              <td align="right" nowrap="nowrap">19</td>
+              <td align="right" nowrap="nowrap">1.014</td>
+              <td align="right" nowrap="nowrap">0.053</td>
+              <td align="right" nowrap="nowrap">133</td>
+            </tr>
+            <tr style="background-color:#f7f7f7">
+              <td nowrap="nowrap">bookmarks</td>
+              <td align="center" nowrap="nowrap">text</td>
+              <td align="right" nowrap="nowrap">87856</td>
+              <td align="right" nowrap="nowrap">2150</td>
+              <td align="right" nowrap="nowrap">0</td>
+              <td align="right" nowrap="nowrap">208</td>
+              <td align="right" nowrap="nowrap">2.028</td>
+              <td align="right" nowrap="nowrap">0.010</td>
+              <td align="right" nowrap="nowrap">18716</td>
+            </tr>
+            <tr style="background-color:#f0f0f0">
+              <td nowrap="nowrap">CAL500 </td>
+              <td align="center" nowrap="nowrap">music</td>
+              <td align="right" nowrap="nowrap">502</td>
+              <td align="right" nowrap="nowrap">0</td>
+              <td align="right" nowrap="nowrap">68</td>
+              <td align="right" nowrap="nowrap">174</td>
+              <td align="right" nowrap="nowrap">26.044</td>
+              <td align="right" nowrap="nowrap">0.150</td>
+              <td align="right" nowrap="nowrap">502</td>
+            </tr>
+            <tr style="background-color:#f7f7f7">
+              <td nowrap="nowrap">corel5k </td>
+              <td align="center" nowrap="nowrap">images</td>
+              <td align="right" nowrap="nowrap">5000</td>
+              <td align="right" nowrap="nowrap">499</td>
+              <td align="right" nowrap="nowrap">0</td>
+              <td align="right" nowrap="nowrap">374</td>
+              <td align="right" nowrap="nowrap">3.522</td>
+              <td align="right" nowrap="nowrap">0.009</td>
+              <td align="right" nowrap="nowrap">3175</td>
+            </tr>
+            <tr style="background-color:#f0f0f0">
+              <td nowrap="nowrap">corel16k (10 samples) </td>
+              <td align="center" nowrap="nowrap">images</td>
+              <td align="right" nowrap="nowrap">13811±87 </td>
+              <td align="right" nowrap="nowrap">500</td>
+              <td align="right" nowrap="nowrap">0</td>
+              <td align="right" nowrap="nowrap">161±9</td>
+              <td align="right" nowrap="nowrap">2.867±0.033</td>
+              <td align="right" nowrap="nowrap">0.018±0.001</td>
+              <td align="right" nowrap="nowrap">4937±158</td>
+            </tr>
+            <tr style="background-color:#f7f7f7">
+              <td nowrap="nowrap">delicious</td>
+              <td align="center" nowrap="nowrap">text (web) </td>
+              <td align="right" nowrap="nowrap">16105</td>
+              <td align="right" nowrap="nowrap">500</td>
+              <td align="right" nowrap="nowrap">0</td>
+              <td align="right" nowrap="nowrap">983</td>
+              <td align="right" nowrap="nowrap">19.020</td>
+              <td align="right" nowrap="nowrap">0.019</td>
+              <td align="right" nowrap="nowrap">15806</td>
+            </tr>
+            <tr style="background-color:#f0f0f0">
+              <td nowrap="nowrap">emotions</td>
+              <td align="center" nowrap="nowrap">music</td>
+              <td align="right" nowrap="nowrap">593</td>
+              <td align="right" nowrap="nowrap">0</td>
+              <td align="right" nowrap="nowrap">72</td>
+              <td align="right" nowrap="nowrap">6</td>
+              <td align="right" nowrap="nowrap">1.869</td>
+              <td align="right" nowrap="nowrap">0.311</td>
+              <td align="right" nowrap="nowrap">27</td>
+            </tr>
+            <tr style="background-color:#f7f7f7">
+              <td nowrap="nowrap">enron</td>
+              <td align="center" nowrap="nowrap">text</td>
+              <td align="right" nowrap="nowrap">1702</td>
+              <td align="right" nowrap="nowrap">1001</td>
+              <td align="right" nowrap="nowrap">0</td>
+              <td align="right" nowrap="nowrap">53</td>
+              <td align="right" nowrap="nowrap">3.378</td>
+              <td align="right" nowrap="nowrap">0.064</td>
+              <td align="right" nowrap="nowrap">753</td>
+            </tr>
+
+            <tr style="background-color:#f0f0f0">
+              <td nowrap="nowrap">EUR-Lex (directory codes) </td>
+              <td align="center" nowrap="nowrap">text</td>
+              <td align="right" nowrap="nowrap">19348</td>
+              <td align="right" nowrap="nowrap">0</td>
+              <td align="right" nowrap="nowrap">5000</td>
+              <td align="right" nowrap="nowrap">412</td>
+              <td align="right" nowrap="nowrap">1.292</td>
+              <td align="right" nowrap="nowrap">0.003</td>
+              <td align="right" nowrap="nowrap">1615</td>
+            </tr>
+            <tr style="background-color:#f7f7f7">
+              <td nowrap="nowrap">EUR-Lex (subject matters) </td>
+              <td align="center" nowrap="nowrap">text</td>
+              <td align="right" nowrap="nowrap">19348</td>
+              <td align="right" nowrap="nowrap">0</td>
+              <td align="right" nowrap="nowrap">5000</td>
+              <td align="right" nowrap="nowrap">201</td>
+              <td align="right" nowrap="nowrap">2.213</td>
+              <td align="right" nowrap="nowrap">0.011</td>
+              <td align="right" nowrap="nowrap">2504</td>
+            </tr>
+            <tr style="background-color:#f0f0f0">
+              <td nowrap="nowrap">EUR-Lex (eurovoc descriptors) </td>
+              <td align="center" nowrap="nowrap">text</td>
+              <td align="right" nowrap="nowrap">19348</td>
+              <td align="right" nowrap="nowrap">0</td>
+              <td align="right" nowrap="nowrap">5000</td>
+              <td align="right" nowrap="nowrap">3993</td>
+              <td align="right" nowrap="nowrap">5.310</td>
+              <td align="right" nowrap="nowrap">0.001</td>
+              <td align="right" nowrap="nowrap">16467</td>
+            </tr>
+            <tr style="background-color:#f0f0f0">
+              <td nowrap="nowrap">flags</td>
+              <td align="center" nowrap="nowrap">images (toy)</td>
+              <td align="right" nowrap="nowrap">194</td>
+              <td align="right" nowrap="nowrap">9</td>
+              <td align="right" nowrap="nowrap">10</td>
+              <td align="right" nowrap="nowrap">7</td>
+              <td align="right" nowrap="nowrap">3.392</td>
+              <td align="right" nowrap="nowrap">0.485</td>
+              <td align="right" nowrap="nowrap">54</td>
+            </tr>
+            <tr style="background-color:#f7f7f7">
+              <td nowrap="nowrap" style="height: 23px">genbase</td>
+              <td align="center" nowrap="nowrap" style="height: 23px">biology</td>
+              <td align="right" nowrap="nowrap" style="height: 23px">662</td>
+              <td align="right" nowrap="nowrap" style="height: 23px">1186</td>
+              <td align="right" nowrap="nowrap" style="height: 23px">0</td>
+              <td align="right" nowrap="nowrap" style="height: 23px">27</td>
+              <td align="right" nowrap="nowrap" style="height: 23px">1.252</td>
+              <td align="right" nowrap="nowrap" style="height: 23px">0.046</td>
+              <td align="right" nowrap="nowrap" style="height: 23px">32</td>
+            </tr>
+            <tr style="background-color:#f0f0f0">
+              <td nowrap="nowrap">mediamill</td>
+              <td align="center" nowrap="nowrap">video</td>
+              <td align="right" nowrap="nowrap">43907</td>
+              <td align="right" nowrap="nowrap">0</td>
+              <td align="right" nowrap="nowrap">120</td>
+              <td align="right" nowrap="nowrap">101</td>
+              <td align="right" nowrap="nowrap">4.376</td>
+              <td align="right" nowrap="nowrap">0.043</td>
+              <td align="right" nowrap="nowrap">6555</td>
+            </tr>
+            <tr style="background-color:#f7f7f7">
+              <td nowrap="nowrap">medical</td>
+              <td align="center" nowrap="nowrap">text</td>
+              <td align="right" nowrap="nowrap">978</td>
+              <td align="right" nowrap="nowrap">1449</td>
+              <td align="right" nowrap="nowrap">0</td>
+              <td align="right" nowrap="nowrap">45</td>
+              <td align="right" nowrap="nowrap">1.245</td>
+              <td align="right" nowrap="nowrap">0.028</td>
+              <td align="right" nowrap="nowrap">94</td>
+            </tr>
+            <tr style="background-color:#f7f7f7">
+              <td nowrap="nowrap">NUS-WIDE<img alt="new dataset" height="11" src="./Multi-label classification datasets_files/new2.gif" width="28"></td>
+              <td align="center" nowrap="nowrap">images</td>
+              <td align="right" nowrap="nowrap">269648</td>
+              <td align="right" nowrap="nowrap">0</td>
+              <td align="right" nowrap="nowrap">128/500</td>
+              <td align="right" nowrap="nowrap">81</td>
+              <td align="right" nowrap="nowrap">1.869</td>
+              <td align="right" nowrap="nowrap">0.023</td>
+              <td align="right" nowrap="nowrap">18430</td>
+            </tr>
+            <tr style="background-color:#f0f0f0">
+              <td nowrap="nowrap">rcv1v2 (subset1)</td>
+              <td align="center" nowrap="nowrap">text</td>
+              <td align="right" nowrap="nowrap">6000</td>
+              <td align="right" nowrap="nowrap">0</td>
+              <td align="right" nowrap="nowrap">47236</td>
+              <td align="right" nowrap="nowrap">101</td>
+              <td align="right" nowrap="nowrap">2.880</td>
+              <td align="right" nowrap="nowrap">0.029</td>
+              <td align="right" nowrap="nowrap">1028</td>
+            </tr>
+            <tr style="background-color:#f7f7f7">
+              <td nowrap="nowrap">rcv1v2 (subset2)</td>
+              <td align="center" nowrap="nowrap">text</td>
+              <td align="right" nowrap="nowrap">6000</td>
+              <td align="right" nowrap="nowrap">0</td>
+              <td align="right" nowrap="nowrap">47236</td>
+              <td align="right" nowrap="nowrap">101</td>
+              <td align="right" nowrap="nowrap">2.634</td>
+              <td align="right" nowrap="nowrap">0.026</td>
+              <td align="right" nowrap="nowrap">954</td>
+            </tr>
+            <tr style="background-color:#f0f0f0">
+              <td nowrap="nowrap">rcv1v2 (subset3)</td>
+              <td align="center" nowrap="nowrap">text</td>
+              <td align="right" nowrap="nowrap">6000</td>
+              <td align="right" nowrap="nowrap">0</td>
+              <td align="right" nowrap="nowrap">47236</td>
+              <td align="right" nowrap="nowrap">101</td>
+              <td align="right" nowrap="nowrap">2.614</td>
+              <td align="right" nowrap="nowrap">0.026</td>
+              <td align="right" nowrap="nowrap">939</td>
+            </tr>
+            <tr style="background-color:#f7f7f7">
+              <td nowrap="nowrap">rcv1v2 (subset4)</td>
+              <td align="center" nowrap="nowrap">text</td>
+              <td align="right" nowrap="nowrap">6000</td>
+              <td align="right" nowrap="nowrap">0</td>
+              <td align="right" nowrap="nowrap">47229</td>
+              <td align="right" nowrap="nowrap">101</td>
+              <td align="right" nowrap="nowrap">2.484</td>
+              <td align="right" nowrap="nowrap">0.025</td>
+              <td align="right" nowrap="nowrap">816</td>
+            </tr>
+            <tr style="background-color:#f0f0f0">
+              <td nowrap="nowrap">rcv1v2 (subset5)</td>
+              <td align="center" nowrap="nowrap">text</td>
+              <td align="right" nowrap="nowrap">6000</td>
+              <td align="right" nowrap="nowrap">0</td>
+              <td align="right" nowrap="nowrap">47235</td>
+              <td align="right" nowrap="nowrap">101</td>
+              <td align="right" nowrap="nowrap">2.642</td>
+              <td align="right" nowrap="nowrap">0.026</td>
+              <td align="right" nowrap="nowrap">946</td>
+            </tr>
+            <tr style="background-color:#f7f7f7">
+              <td nowrap="nowrap">scene</td>
+              <td align="center" nowrap="nowrap">image</td>
+              <td align="right" nowrap="nowrap">2407</td>
+              <td align="right" nowrap="nowrap">0</td>
+              <td align="right" nowrap="nowrap">294</td>
+              <td align="right" nowrap="nowrap">6</td>
+              <td align="right" nowrap="nowrap">1.074</td>
+              <td align="right" nowrap="nowrap">0.179</td>
+              <td align="right" nowrap="nowrap">15</td>
+            </tr>
+            <tr style="background-color:#f0f0f0">
+              <td nowrap="nowrap">tmc2007</td>
+              <td align="center" nowrap="nowrap">text</td>
+              <td align="right" nowrap="nowrap">28596</td>
+              <td align="right" nowrap="nowrap">49060<br>                  </td>
+              <td align="right" nowrap="nowrap">0</td>
+              <td align="right" nowrap="nowrap">22</td>
+              <td align="right" nowrap="nowrap">2.158</td>
+              <td align="right" nowrap="nowrap">0.098</td>
+              <td align="right" nowrap="nowrap">1341</td>
+            </tr>
+            <tr style="background-color:#f7f7f7">
+              <td nowrap="nowrap">yahoo</td>
+              <td align="center" nowrap="nowrap">text</td>
+              <td align="right" nowrap="nowrap">5423±1259</td>
+              <td align="right" nowrap="nowrap">0</td>
+              <td align="right" nowrap="nowrap">32786±7990</td>
+              <td align="right" nowrap="nowrap">31±6</td>
+              <td align="right" nowrap="nowrap">1.481±0.154</td>
+              <td align="right" nowrap="nowrap">0.051±0.012</td>
+              <td align="right" nowrap="nowrap">321±139</td>
+            </tr>
+            <tr style="background-color:#f0f0f0">
+              <td nowrap="nowrap">yeast</td>
+              <td align="center" nowrap="nowrap">biology</td>
+              <td align="right" nowrap="nowrap">2417</td>
+              <td align="right" nowrap="nowrap">0</td>
+              <td align="right" nowrap="nowrap">103</td>
+              <td align="right" nowrap="nowrap">14</td>
+              <td align="right" nowrap="nowrap">4.237</td>
+              <td align="right" nowrap="nowrap">0.303</td>
+              <td align="right" nowrap="nowrap">198</td>
+            </tr>
+          </tbody>
+        </table>
+</div>
+			<h2><strong>Files and Sources</strong></h2>
+            <ul>
+              <li><strong><strong>bibtex</strong><br>
+                </strong><em>files (sparse)</em>: Train and test sets along with their union and the XML header [<a href="http://sourceforge.net/projects/mulan/files/datasets/bibtex.rar">bibtex.rar</a>]<br>
+                <em>source</em>: I. Katakis, G. Tsoumakas, I. Vlahavas, "<a href="http://mlkd.csd.auth.gr/publication_details.asp?publicationID=278">Multilabel Text Classification for Automated Tag Suggestion</a>", <em>Proceedings of the ECML/PKDD 2008 Discovery Challenge</em>, Antwerp, Belgium, 2008. </li>
+            </ul>
+            <ul>
+              <li><strong>birds
+			  <img alt="new dataset" height="11" src="./Multi-label classification datasets_files/new2.gif" width="28"></strong><br>
+			  <em>files</em>: Train and test set along with the XML header [<a href="http://sourceforge.net/projects/mulan/files/datasets/birds.rar">birds.rar</a>]<br>
+			  <em>source</em>: F. Briggs, Yonghong Huang, R. Raich, K. Eftaxias, Zhong Lei, W. Cukierski, S. Hadley, A. Hadley, M. Betts, X. Fern, J. Irvine, L. Neal, A. Thomas, G. Fodor, G. Tsoumakas, Hong Wei Ng, Thi Ngoc Tho Nguyen, H. Huttunen, P. Ruusuvuori, T. Manninen, A. Diment, T. Virtanen, J. Marzat, J. Defretin, D. Callender, C. Hurlburt, K. Larrey, M. Milakov.
+
+			  "The 9th annual MLSP competition: New methods for acoustic classification of multiple simultaneous bird species in a noisy environment",
+			  in proc. 2013 IEEE International Workshop on Machine Learning for
+			  Signal Processing (MLSP).</li>
+            </ul>
+			<ul>
+              <li><strong>bookmarks<br></strong><em>files (sparse)</em>: Union of train and test sets along with the XML header [<a href="http://sourceforge.net/projects/mulan/files/datasets/bookmarks.rar">bookmarks.rar</a>]<br>
+			  <em>source</em>: I. Katakis, G. Tsoumakas, I. Vlahavas, "<a href="http://mlkd.csd.auth.gr/publication_details.asp?publicationID=278">Multilabel Text Classification for Automated Tag Suggestion</a>",
+			  <em>Proceedings of the ECML/PKDD 2008 Discovery Challenge</em>, Antwerp, Belgium, 2008.
+			  </li>
+            </ul>
+			<ul>
+              <li><strong><strong>CAL500</strong><br>
+                </strong><em>files</em>: Dataset along with the XML header [<a href="http://sourceforge.net/projects/mulan/files/datasets/CAL500.rar">CAL500.rar</a>]<br>
+                <em>source</em>:      Douglas Turnbull, Luke Barrington, David Torres and Gert Lanckriet, Semantic Annotation and Retrieval of Music and Sound Effects, IEEE Transactions on Audio, Speech and Language Processing 16(2), pp. 467-476, 2008.<br>
+                <em>More information</em>: <a href="http://cosmal.ucsd.edu/cal/projects/AnnRet/">http://cosmal.ucsd.edu/cal/projects/AnnRet/</a></li>
+			</ul>
+            <ul>
+              <li><strong><strong>corel5k</strong><br>
+                </strong><em>files</em>: Train and test sets along with their union and the XML header [<a href="http://sourceforge.net/projects/mulan/files/datasets/corel5k.rar">corel5k.rar</a>]
+			  [<a href="http://sourceforge.net/projects/mulan/files/datasets/corel5k-sparse.rar">corel5k-sparse.rar</a>]<br>
+                <em>source</em>:      Pinar Duygulu, Kobus Barnard, Nando de Freitas, and David Forsyth, Object recognition as machine translation: Learning a lexicon for a fixed image vocabulary , 7th European Conference on Computer Vision, pp IV:97-112, 2002.<br>
+                <em>More information</em>:
+              <a href="http://kobus.ca/research/data/eccv_2002/">http://kobus.ca/research/data/eccv_2002/</a></li>
+            </ul>
+            <ul>
+
+              <li><strong><strong>corel16k</strong><br>
+                </strong><em>files</em>: 10 different samples containing the train, test and test3 disjoint sets along with their union and the XML header [<a href="http://sourceforge.net/projects/mulan/files/datasets/corel16k001.rar">corel16k.rar</a>]<br>
+                <em>source</em>:      "Matching Words and Pictures",  by Kobus Barnard, Pinar Duygulu, Nando de Freitas, David Forsyth, David Blei, and Michael I. Jordan, Journal of Machine Learning Research, Vol 3, pp 1107-1135. <br>
+                <em>More information</em>: <a href="http://kobus.ca/research/data/jmlr_2003/">http://kobus.ca/research/data/jmlr_2003/</a></li>
+            </ul>
+            <ul>
+              <li><strong><strong>delicious</strong><br>
+                </strong><em>files (sparse)</em>: Train and test sets along with their union and the XML header [<a href="http://sourceforge.net/projects/mulan/files/datasets/delicious.rar">delicious.rar</a>]<br>
+                <em>source</em>: G. Tsoumakas, I. Katakis, I. Vlahavas, "<a href="http://mlkd.csd.auth.gr/publication_details.asp?publicationID=276">Effective and Efficient  Multilabel Classification in Domains with Large Number of Labels</a>", <em>Proc. ECML/PKDD 2008 Workshop on Mining Multidimensional Data (MMD'08)</em>, Antwerp, Belgium, 2008. </li>
+            </ul>
+            <ul>
+              <li><strong>emotions <br>
+                </strong><em>files</em>: Train and test sets along with their union and the XML header [<a href="http://sourceforge.net/projects/mulan/files/datasets/emotions.rar">emotions.rar</a>]<br>
+                <em>source</em>: K. Trohidis, G. Tsoumakas, G. Kalliris, I. Vlahavas. "<a href="http://mlkd.csd.auth.gr/publication_details.asp?publicationID=269">Multilabel Classification of Music into Emotions</a>". Proc. 2008 International Conference on Music Information Retrieval (ISMIR 2008), pp. 325-330, Philadelphia, PA, USA, 2008. </li>
+            </ul>
+            <ul>
+              <li><strong><strong>enron</strong><br>
+                </strong> <em>files</em> (sparse): Train and test sets along with their union, the XML header and a file describing the categories [<a href="http://sourceforge.net/projects/mulan/files/datasets/enron.rar">enron.rar</a>]<br>
+                <em>sources</em>: a) <a href="http://www.cs.waikato.ac.nz/~jmr30/">Jesse Read's Web Page</a>, b) <a href="http://bailando.sims.berkeley.edu/enron_email.html">UC Berkeley Enron Email Analysis Project</a></li>
+            </ul>
+            <ul>
+              <li><strong> EUR-Lex<br>
+              </strong><em>files</em>: Cross validation splits of TF-IDF representation of the documents with the first 5000 most frequent features selected, as used in the experiments. Usable for a direct comparison. XML header included. [<a href="http://sourceforge.net/projects/mulan/files/datasets/eurlex-directory-codes.rar">eurlex-directory-codes.rar</a>]  [<a href="http://sourceforge.net/projects/mulan/files/datasets/eurlex-subject-matters.rar">eurlex-subject-matters.rar</a>] [<a href="http://sourceforge.net/projects/mulan/files/datasets/eurlex-eurovoc-descriptors.rar">eurlex-eurovoc-descriptors.rar</a>]<em><br>
+              source</em>: Eneldo Loza Mencía and Johannes Fürnkranz. Efficient pairwise multi­label classification for large-scale problems in the legal domain. In  Proceedings of the European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML-PKDD-2008), Part II, pages 50-65, Antwerp, Belgium, 2008.Springer-Verlag<em> <br>
+              More information</em>: <a href="http://www.ke.tu-darmstadt.de/resources/eurlex">Knowledge Engineering Group, TU Darmstadt</a></li>
+            </ul>
+            <ul>
+              <li><strong>flags</strong><br>
+			  <em>files</em>: Train and test sets along with their union, the XML header and a readme file [<a href="http://sourceforge.net/projects/mulan/files/datasets/flags.zip">flags.zip</a>]<br>
+			  <em>source</em>: The dataset was used for Multi-label Classification in "Gonçalves, Eduardo Corrêa, Alexandre Plastino, and Alex A. Freitas. A Genetic Algorithm for Optimizing the Label Ordering in Multi-Label Classifier Chains. ICTAI 2013." The original data can be found at the <a href="http://archive.ics.uci.edu/ml/machine-learning-databases/flags/">UCI</a> repository.</li>
+            </ul>
+            <ul>
+              <li><strong>genbase</strong><br>
+                <em>files</em>: Train and test sets along with their union and the XML header [<a href="http://sourceforge.net/projects/mulan/files/datasets/genbase.rar">genbase.rar</a>]<br>
+              <em>source</em>:  S. Diplaris, G. Tsoumakas, P. Mitkas and I. Vlahavas. Protein  Classification with Multiple Algorithms, Proc. 10th Panhellenic  Conference on Informatics (PCI 2005), pp. 448-456, Volos, Greece,  November 2005. <br>
+              <em>note</em>: The first attribute in this dataset is just an identification of the instance. There are several attributes with constant values (yes/no). <br>
+		</li>
+      </ul>
+            <ul>
+              <li><strong>mediamill</strong> <br>
+                  <em>files</em>: Train and test sets along with their union and the XML header [<a href="http://sourceforge.net/projects/mulan/files/datasets/mediamill.rar">mediamill.rar</a>]<br>
+                  <em>source</em>:  C.G.M. Snoek, M. Worring, J.C. van Gemert, J.-M. Geusebroek, and A.W.M.  Smeulders. The Challenge Problem for Automated Detection of 101  Semantic Concepts in Multimedia. In Proceedings of ACM Multimedia, pp.  421-430, Santa Barbara, USA, October 2006.<em><br>
+                    related URL</em>: <a href="http://www.mediamill.nl/challenge/">The Mediamill challenge</a></li>
+            </ul>
+		    <ul>
+              <li><strong><strong>medical</strong><br>
+              </strong><em>files</em>: Train and test sets along with their union and the XML header [<a href="http://sourceforge.net/projects/mulan/files/datasets/medical.rar">medical.rar</a>]<br>
+              <em>source</em>:
+			  <span style="color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); display: inline !important; float: none;">
+			  John P. Pestian, Christopher Brew, Pawel Matykiewicz, D. J.
+			  Hovermale, Neil Johnson, K. Bretonnel Cohen, and Wodzislaw Duch.
+			  2007. A shared task involving multi-label classification of
+			  clinical free text. In<span class="Apple-converted-space">&nbsp;</span></span><em style="color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 16px; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);">Proceedings
+			  of the Workshop on BioNLP 2007: Biological, Translational, and
+			  Clinical Language Processing</em><span style="color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); display: inline !important; float: none;"><span class="Apple-converted-space">&nbsp;</span>(BioNLP
+			  '07). Association for Computational Linguistics, Stroudsburg, PA,
+			  USA, 97-104.</span></li>
+            </ul>
+            <ul>
+              <li><strong>NUS-WIDE
+			  <img alt="new dataset" height="11" src="./Multi-label classification datasets_files/new2.gif" width="28"></strong><br>
+              We provide two versions of the full NUS-WIDE dataset. In the first version, images are represented using 500-D bag of visual words features provided by the creators of the dataset [1]. In the second version, images are represented using 128-D cVLAD+ features described in [2]. In both cases, we provide train and test sets (splitted as described in [1]). The 1st attirube in all datasets is the image id.<br>
+			  <em>files</em>: 128-D cVLAD+ [<a href="http://sourceforge.net/projects/mulan/files/datasets/nuswide-cVLADplus.rar">nuswide-cVLADplus.rar</a>] / 500-D bag of visual words [<a href="http://sourceforge.net/projects/mulan/files/datasets/nuswide-bow.rar">nuswide-bow.rar</a>]<br>
+              [1] Tat-Seng Chua, Jinhui Tang, Richang Hong, Haojie Li, Zhiping Luo, and Yan-Tao Zheng. "NUS-WIDE: A Real-World Web Image Database from National University of Singapore", ACM International Conference on Image and Video Retrieval. Greece. Jul. 8-10, 2009. <br>
+              [2] E. Spyromitros-Xioufis, S. Papadopoulos, Y. Kompatsiaris, G. Tsoumakas, I. Vlahavas, "A Comprehensive Study over VLAD and Product Quantization in Large-scale Image Retrieval", IEEE Transactions on Multimedia, 2014.
+              </li>
+            </ul>
+            <ul>
+              <li><strong>rcv1v2 subsets</strong><br>
+                  <em>files (sparse)</em>: Train and test sets along with their union and the XML header
+                [<a href="http://sourceforge.net/projects/mulan/files/datasets/rcv1subset1.rar">rcv1subset1.rar</a>]<br>
+                [<a href="http://sourceforge.net/projects/mulan/files/datasets/rcv1subset2.rar">rcv1subset2.rar</a>]
+                [<a href="http://sourceforge.net/projects/mulan/files/datasets/rcv1subset3.rar">rcv1subset3.rar</a>]
+                [<a href="http://sourceforge.net/projects/mulan/files/datasets/rcv1subset4.rar">rcv1subset4.rar</a>]
+                [<a href="http://sourceforge.net/projects/mulan/files/datasets/rcv1subset5.rar">rcv1subset5.rar</a>] <br>
+                <em>source</em>: David D. Lewis, Yiming Yang, Tony G. Rose, and Fan Li.  RCV1: A new benchmark collection for text categorization research.  Journal of Machine Learning Research, 5:361-397, 2004.</li>
+            </ul>
+            <ul>
+              <li><strong>scene</strong><br>
+                  <em>files</em>: Train and test sets along with their union and the XML header [<a href="http://sourceforge.net/projects/mulan/files/datasets/scene.rar">scene.rar</a>]<br>
+                  <em>source</em>: M.R. Boutell, J. Luo, X. Shen, and C.M. Brown. Learning   					multi-labelscene                        classiffication. Pattern Recognition, 37(9):1757-1771, 2004.</li>
+            </ul>
+            <ul>
+              <li><strong>tmc2007</strong> <br>
+                  <em>files (sparse): </em>Train and test sets along with their union and the XML header [<a href="http://sourceforge.net/projects/mulan/files/datasets/tmc2007.rar">tmc2007.rar</a>] <br>
+                A shorter version of this dataset, after feature selection (top 500  features selected) is also available:<br>
+                <em>files: </em>[<a href="http://sourceforge.net/projects/mulan/files/datasets/rcv1subset1.rar/tmc2007-500.rar">tmc2007-500.rar</a>]<br>
+                <em>source</em>: A. Srivastava, B. Zane-Ulman: Discovering recurring anomalies in text reports                        regarding complex space systems. In: 2005 IEEE Aerospace Conference. (2005)<br>
+                <em>related URL</em>: <a href="http://www.cs.utk.edu/tmw07/">SIAM Text Mining Workshop 2007</a></li>
+            </ul>
+            <ul>
+              <li><strong>yahoo </strong><br>
+                  <em>files</em>: 11 train and test sets along with their union and the XML header [<a href="http://sourceforge.net/projects/mulan/files/datasets/yahoo.rar">yahoo.rar</a>] <br>
+              <em>source</em>:  N. Ueda, K. Saito: Parametric mixture models for multi-labeled text,
+			  In&nbsp; Neural Information Processing Systems 15 (NIPS 15), MIT Press, pp. 737-744, 2002.</li>
+</ul>
+<ul>
+				<li><strong>yeast </strong><br><em>files</em>: Train and test sets along with their union and the XML header [<a href="http://sourceforge.net/projects/mulan/files/datasets/yeast.rar">yeast.rar</a>]
+				<br><em>source</em>:  A. Elisseeff and J. Weston. A kernel method for multi-labelled  classification. In T.G. Dietterich, S. Becker, and Z. Ghahramani,  (eds), Advances in Neural Information Processing Systems 14, 2001.</li>
+                
+            </ul>
+            <h2>Links</h2>
+            <ul>
+              <li><a href="http://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/multilabel.html"> Multi-Label Datasets from LIBSVM</a> </li>
+                              <li><a href="http://www.cs.waikato.ac.nz/~jmr30/">Jesse   Read's homepage at University of Waikato</a></li>
+            </ul>
+      <!-- InstanceEndEditable --></td>
+  </tr>
+  <tr bgcolor="#000000">
+    <td align="right" valign="middle"><a href="http://sourceforge.net/"><img src="./Multi-label classification datasets_files/sflogo.php" width="125" height="37" border="0" alt="SourceForge.net Logo"></a></td>
+  </tr>
+</tbody></table>
+
+<!-- InstanceEnd -->
+</body></html>

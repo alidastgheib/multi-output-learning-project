@@ -1,0 +1,21 @@
+##################################################################
+The objective of the competition is to help us build as good a model as possible to 
+predict "monthly online sales of a product".
+
+##################################################################
+##################################################################
+Each row in this data set represents a different consumer product.
+
+Input variables: 
+Input_Date_1 is the day number the major advertising campaign began and the product launched.  
+Input_Date_2 is the day number the product was announced and a pre-release advertising campaign began.
+Other columns in the data set are features of the product and the advertising campaign.  
+Input_Quan_x are: quantitative variables 
+Input_Cat_x are: categorical variables. 
+Note: Binary categorical variables are measured as (1) if the product had the feature and (0) if it did not.
+##################################################################
+
+Output (Outcome) variables:
+The first 12 columns (Outcome_M1 through Outcome_M12) contains the monthly online sales for
+the first 12 months after the product launches.  
+##################################################################

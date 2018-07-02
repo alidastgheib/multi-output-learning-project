@@ -1,0 +1,15 @@
+Genbase Dataset:
+
+The protein classes considered in are the 10 most important protein families:
+PDOC00064 (a class of oxydoreductases), PDOC00154 (a class of isomerases),
+PDOC00224 (a class of cytokines and growth factors), PDOC00343 (a class of structural proteins), 
+PDOC00561 (a class of receptors), PDOC00662 (a class of DNA or RNA associated proteins), 
+PDOC00670 (a class of transferases), PDOC00791 (a class of protein secretion and chaperones), and 
+PDOC50007 (a class of hydrolases). 
+
+
+For clarity of presentation, the Prosite documentation ID, i.e. the PDOCxxxxx number was used to represent that class. 
+Similarly, the Prosite access number i.e. the PSxxxxx was used to represent that motif pattern or profile. 
+
+######################################
+Note: Both input and output features are binary variables.

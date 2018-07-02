@@ -1,0 +1,50 @@
+.code {
+	font-family: "Courier New", Courier, monospace;
+	white-space: pre;
+}
+
+.menu {
+	color: #FFFFFF;
+	background-color: #000000;
+	text-align: center;
+}
+
+a.menu:link {
+	font-variant: small-caps;
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+a.menu:visited {
+	font-variant: small-caps;
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+body {
+	background-color: #D4F8BC;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.mainTable {
+	border: thin solid #000000;
+}
+
+.mainContent {
+	background-color: #FFFFFF;
+	white-space: normal;
+}
+.mulanTitle {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 1.6em;
+	border: medium solid #DCDCDC;
+	font-weight: bold;
+}
+
+#mtr{
+font-size:0.9em;
+}
+
+#mtr td{
+text-align:center;
+}

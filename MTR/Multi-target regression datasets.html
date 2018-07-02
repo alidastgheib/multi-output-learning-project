@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0046)http://mulan.sourceforge.net/datasets-mtr.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/mulan.dwt" codeOutsideHTMLIsLocked="false" --><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>multilabel datasets</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+<link href="./Multi-target regression datasets_files/mulan.css" rel="stylesheet" type="text/css">
+<style></style></head>
+
+<body>
+<table width="1000" border="0" align="center" cellpadding="5" cellspacing="0" bgcolor="#F2F3F8" class="mainTable">
+  <tbody><tr>
+    <td align="center" bgcolor="#663200" class="mainContent"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tbody><tr>
+        <td><a href="http://mulan.sourceforge.net/index.html"><img src="./Multi-target regression datasets_files/logo.png" alt="Mulan logo" width="224" height="108" border="0"></a></td>
+        <td width="100%" align="center" class="mulanTitle">Mulan<span class="style6">:</span> A Java Library for Multi-Label Learning</td>
+      </tr>
+    </tbody></table>      </td>
+  </tr>
+  <tr>
+    <td class="menu">[<a href="http://mulan.sourceforge.net/index.html" class="menu">Home</a>] - [<a href="http://mulan.sourceforge.net/download.html" class="menu">Getting Mulan</a>] - [<a href="http://mulan.sourceforge.net/documentation.html" class="menu">Documentation</a>] -  [<a href="http://mulan.sourceforge.net/datasets.html" class="menu">Datasets</a>]  - [<a href="http://mulan.sourceforge.net/members.html" class="menu">The Team</a>]</td>
+  </tr>
+  <tr>
+    <td class="mainContent">
+	<!-- InstanceBeginEditable name="Main" -->
+      <h1>Datasets</h1>
+      <p><img alt="new mtr datasets" height="11" src="./Multi-target regression datasets_files/new2.gif" width="28">Mulan was recently extended for multi-target regression (MTR). Below you can find a list of benchmark MTR datasets that we have collected along with the corresponding sources and citations. For more details on each dataset see the corresponding paper(s). All datasets can be downloaded from <a href="http://users.auth.gr/espyromi/mtr/mtr-datasets.zip">here</a>!</p>
+      <!-- <p>We initially provide a table with dataset statistics, followed by the actual files and sources. </p> -->
+      <h2>Statistics</h2>
+
+	<table border="0" cellpadding="2" cellspacing="1" id="mtr">
+		<tbody><tr style="background-color:#D4F8BC">
+			<th width="100px;">name</th>
+			<th width="100px;">examples</th>
+            <th width="100px;">features</th>
+            <th width="100px;">targets</th>
+            <th width="100px;">Source/Citation</th>
+		</tr>
+		       	<tr style="background-color:#f7f7f7">
+				<td class="dataset">atp1d</td>
+					<td>337</td>
+		        	<td>411</td>
+		            <td>6</td>
+		            <td>[1]</td>
+				</tr>
+		        <tr style="background-color:#f0f0f0">
+				<td class="dataset">atp7d</td>
+					<td>296</td>
+		        	<td>411</td>
+		            <td>6</td>
+		            <td>[1]</td>
+				</tr>
+		       	<tr style="background-color:#f7f7f7">
+				<td class="dataset">oes97</td>
+					<td>334</td>
+		        	<td>263</td>
+		            <td>16</td>
+		            <td>[1]</td>
+				</tr>
+		        <tr style="background-color:#f0f0f0">
+				<td class="dataset">oes10</td>
+					<td>403</td>
+		        	<td>298</td>
+		            <td>16</td>
+		            <td>[1]</td>
+				</tr>
+		       	<tr style="background-color:#f7f7f7">
+				<td class="dataset">rf1</td>
+					<td>9125</td>
+		        	<td>64</td>
+		            <td>8</td>
+		            <td>[1]</td>
+				</tr>
+		        <tr style="background-color:#f0f0f0">
+				<td class="dataset">rf2</td>
+					<td>9125</td>
+		        	<td>576</td>
+		            <td>8</td>
+		            <td>[1]</td>
+				</tr>
+		       	<tr style="background-color:#f7f7f7">
+				<td class="dataset">scm1d</td>
+					<td>9803</td>
+		        	<td>280</td>
+		            <td>16</td>
+		            <td>[1]</td>
+				</tr>
+		        <tr style="background-color:#f0f0f0">
+				<td class="dataset">scm20d</td>
+					<td>8966</td>
+		        	<td>61</td>
+		            <td>16</td>
+		            <td>[1]</td>
+				</tr>
+				<tr style="background-color:#f7f7f7">
+					<td class="dataset">edm</td>
+					<td>154</td>
+		        	<td>16</td>
+		            <td>2</td>
+		            <td>[2]</td>
+				</tr>
+		       	<tr style="background-color:#f0f0f0">
+					<td class="dataset">sf1</td>
+					<td>323</td>
+		        	<td>10</td>
+		            <td>3</td>
+		            <td>[3]</td>
+				</tr>
+		       	<tr style="background-color:#f7f7f7">
+				<td class="dataset">sf2</td>
+					<td>1066</td>
+		        	<td>10</td>
+		            <td>3</td>
+		            <td>[3]</td>
+				</tr>
+		        <tr style="background-color:#f0f0f0">
+		       	    <td class="dataset">jura</td>
+					<td>359</td>
+		        	<td>15</td>
+		            <td>3</td>
+		            <td>[4],[1]</td>
+				</tr>
+		       	<tr style="background-color:#f7f7f7">
+				<td class="dataset">wq</td>
+					<td>1060</td>
+		        	<td>16</td>
+		            <td>14</td>
+		            <td>[5]</td>
+				</tr>
+		        <tr style="background-color:#f0f0f0">
+				<td class="dataset">enb</td>
+					<td>768</td>
+		        	<td>8</td>
+		            <td>2</td>
+		            <td>[6], [1]</td>
+				</tr>
+		       	<tr style="background-color:#f7f7f7">
+				<td class="dataset">slump</td>
+					<td>103</td>
+		        	<td>7</td>
+		            <td>3</td>
+		            <td>[7], [1]</td>
+				</tr>
+		        <tr style="background-color:#f0f0f0">
+				<td class="dataset">andro</td>
+					<td>49</td>
+		        	<td>30</td>
+		            <td>6</td>
+		            <td>[8], [1]</td>
+				</tr>
+		       	<tr style="background-color:#f7f7f7">
+				<td class="dataset">osales</td>
+					<td>639</td>
+		        	<td>413</td>
+		            <td>12</td>
+		            <td>[9], [1]</td>
+				</tr>
+		        <tr style="background-color:#f0f0f0">
+				<td class="dataset">scfp</td>
+					<td>1137</td>
+		        	<td>23</td>
+		            <td>3</td>
+		            <td>[10], [1]</td>
+				</tr>
+	</tbody></table>
+
+        <h3>Sources / Citations</h3>
+        <ol>
+        	<li>E. Spyromitros-Xioufis, G. Tsoumakas, W. Groves, I. Vlahavas, "Multi-Target Regression via Input Space Expansion: Treating Targets as Inputs", Machine Learning, 2016.
+        <a href="http://link.springer.com/article/10.1007%2Fs10994-016-5546-z" target="_blank">[paper]</a>
+        <a href="http://users.auth.gr/espyromi/publications/bibtex/spyromitros2016mlj.bib" target="_blank">[bibtex]</a></li>
+        	<li>A. Karalic, I. Bratko, "First Order Regression", Machine Learning, 1997.</li>
+        	<li><a target="_blank" href="http://archive.ics.uci.edu/ml/datasets/Solar+Flare">UCI repository</a></li>
+        	<li>Gooaverts P., "Geostatistics for natural resources evaluation", Oxford university press, 1997.</li>
+        	<li>S. Dzeroski, D. Demsar, J. Grbovic, "Predicting Chemical Parameters of River Water Quality from Bioindicator Data",  Applied Intelligence, 2000.</li>
+       		<li>A. Tsanas, A. Xifara, "Accurate quantitative estimation of energy performance of residential buildings
+using statistical machine learning tools", Energy and Buildings, 2012.</li>
+			<li>IC. Yeh, "Modeling slump flow of concrete using second-order regressions and artificial neural networks", Cement and Concrete Composites, 2007.</li>
+       		<li>EV. Hatzikos, "An empirical study on sea water quality prediction", Knowledge-based systems, 2008.</li>
+       		<li><a target="_blank" href="https://www.kaggle.com/c/online-sales">Kaggle competition: Online Product Sales</a></li>
+       		<li><a target="_blank" href="https://www.kaggle.com/c/see-click-predict-fix">Kaggle competition: See Click Predict Fix</a></li>
+       </ol>
+
+      <!-- InstanceEndEditable --></td>
+  </tr>
+  <tr bgcolor="#000000">
+    <td align="right" valign="middle"><a href="http://sourceforge.net/"><img src="./Multi-target regression datasets_files/sflogo.php" width="125" height="37" border="0" alt="SourceForge.net Logo"></a></td>
+  </tr>
+</tbody></table>
+
+<!-- InstanceEnd -->
+</body></html>
