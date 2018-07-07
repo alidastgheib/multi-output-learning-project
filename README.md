@@ -1,6 +1,7 @@
 # Preprocessing-for-multi-output-learning-project
 #### Convex optimization course _ Final project _ Article implementation
 
+## Our Task: Implementation of the Following Article
 ## Metric Learning for Multi-output Tasks
 Weiwei Liu, Donna Xu, Ivor W. Tsang and Wenjie Zhang
 
