@@ -1,0 +1,339 @@
+
+<!-- saved from url=(0046)https://www.cs.waikato.ac.nz/ml/weka/arff.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Attribute-Relation File Format (ARFF)</title>
+ </head>
+ <body bgcolor="white">
+
+  <h1>Attribute-Relation File Format (ARFF)</h1>
+
+  <p>November 1st, 2008</p>
+
+  This documentation is superceded by the Wiki article <a href="http://weka.wikispaces.com/ARFF" target="_blank">ARFF</a>.
+  <p>
+
+  </p><p>April 1st, 2002</p>
+
+  <p>
+   An ARFF (Attribute-Relation File Format) file is an ASCII text file
+   that describes a list of instances sharing a set of attributes.
+   ARFF files were developed by the Machine Learning Project at the
+   Department of Computer Science of The University of Waikato for use
+   with the <a href="http://www.cs.waikato.ac.nz/~ml/">Weka machine
+   learning software</a>.  This document descibes the version of ARFF
+   used with Weka versions 3.2 to 3.3; this is an extension of the ARFF
+   format as described in the data mining book written by Ian H. Witten
+   and Eibe Frank (the new additions are string attributes,
+   date attributes, and sparse instances).
+  </p>
+
+  <p>
+   This explanation was cobbled together by Gordon Paynter (gordon.paynter at
+   ucr.edu) from the Weka 2.1 ARFF description, email from Len Trigg (lenbok at
+   myrealbox.com) and Eibe Frank (eibe at cs.waikato.ac.nz), and some datasets.
+   It has been edited by Richard Kirkby (rkirkby at cs.waikato.ac.nz).  Contact
+   Len if you're interested in seeing the ARFF 3 proposal.
+  </p>
+
+  <h2>Overview</h2>
+
+  <p>
+   ARFF files have two distinct sections.  The first section is the
+   <b>Header</b> information, which is followed the <b>Data</b>
+   information.
+  </p>
+
+  <p>
+   The <b>Header</b> of the ARFF file contains the name of the
+   relation, a list of the attributes (the columns in the data), and
+   their types. An example header on the standard IRIS dataset looks
+   like this:
+  </p>
+
+  <pre>   % 1. Title: Iris Plants Database
+   % 
+   % 2. Sources:
+   %      (a) Creator: R.A. Fisher
+   %      (b) Donor: Michael Marshall (MARSHALL%PLU@io.arc.nasa.gov)
+   %      (c) Date: July, 1988
+   % 
+   @RELATION iris
+
+   @ATTRIBUTE sepallength  NUMERIC
+   @ATTRIBUTE sepalwidth   NUMERIC
+   @ATTRIBUTE petallength  NUMERIC
+   @ATTRIBUTE petalwidth   NUMERIC
+   @ATTRIBUTE class        {Iris-setosa,Iris-versicolor,Iris-virginica}
+  </pre>
+
+  <p>
+   The <b>Data</b> of the ARFF file looks like the following:
+  </p>
+
+  <pre>   @DATA
+   5.1,3.5,1.4,0.2,Iris-setosa
+   4.9,3.0,1.4,0.2,Iris-setosa
+   4.7,3.2,1.3,0.2,Iris-setosa
+   4.6,3.1,1.5,0.2,Iris-setosa
+   5.0,3.6,1.4,0.2,Iris-setosa
+   5.4,3.9,1.7,0.4,Iris-setosa
+   4.6,3.4,1.4,0.3,Iris-setosa
+   5.0,3.4,1.5,0.2,Iris-setosa
+   4.4,2.9,1.4,0.2,Iris-setosa
+   4.9,3.1,1.5,0.1,Iris-setosa
+  </pre>
+
+  <p>
+   Lines that begin with a % are comments.  The <b>@RELATION</b>,
+   <b>@ATTRIBUTE</b> and <b>@DATA</b> declarations are case
+   insensitive.
+  </p>
+
+  <h2>Examples</h2>
+
+  <p>
+   Several well-known machine learning datasets are distributed with
+   Weka in the $WEKAHOME/data directory as ARFF files.
+  </p>
+
+  <h2>The ARFF Header Section</h2>
+
+  <p>
+   The ARFF Header section of the file contains the relation
+   declaration and attribute declarations.
+  </p>
+
+  <h3>The @relation Declaration</h3>
+
+  <p>
+   The relation name is defined as the first line in the ARFF file. The
+   format is: 
+
+   </p><pre>    @relation &lt;relation-name&gt;
+   </pre>
+
+   where &lt;relation-name&gt; is a string. The string must be quoted if
+   the name includes spaces.
+  <p></p>
+
+  <h3>The @attribute Declarations</h3>
+
+  <p>
+   Attribute declarations take the form of an orderd sequence of
+   <b>@attribute</b> statements.  Each attribute in the data set has
+   its own <b>@attribute</b> statement which uniquely defines the name
+   of that attribute and it's data type.  The order the attributes are
+   declared indicates the column position in the data section of the
+   file.  For example, if an attribute is the third one declared then
+   Weka expects that all that attributes values will be found in the
+   third comma delimited column.
+  </p>
+
+  <p>
+   The format for the <b>@attribute</b> statement is:
+
+   </p><pre>    @attribute &lt;attribute-name&gt; &lt;datatype&gt;
+   </pre>
+
+   where the <i>&lt;attribute-name&gt;</i> must start with an
+   alphabetic character.  If spaces are to be included in the name
+   then the entire name must be quoted.
+  <p></p>
+
+  <p>
+   The <i>&lt;datatype&gt;</i> can be any of the four types currently
+   (version 3.2.1) supported by Weka:
+   </p><ul>
+    <li>numeric</li>
+    <li>&lt;nominal-specification&gt;</li>
+    <li>string</li>
+    <li>date [&lt;date-format&gt;]</li>
+   </ul>
+   where &lt;nominal-specification&gt; and &lt;date-format&gt; are
+   defined below.  The keywords <b>numeric</b>,
+   <b>string</b> and <b>date</b> are case insensitive.
+  <p></p>
+
+  <h4>Numeric attributes</h4>
+
+  <p>
+   Numeric attributes can be real or integer numbers.
+  </p>
+
+  <h4>Nominal attributes</h4>
+
+  <p>
+   Nominal values are defined by providing an
+   &lt;nominal-specification&gt; listing the possible values:
+   {&lt;nominal-name1&gt;, &lt;nominal-name2&gt;, &lt;nominal-name3&gt;, ...}
+  </p>
+
+  <p>
+   For example, the class value of the Iris dataset can be defined as
+   follows:
+   </p><pre>    @ATTRIBUTE class        {Iris-setosa,Iris-versicolor,Iris-virginica}
+   </pre>
+  <p></p>
+
+  <p>
+   Values that contain spaces must be quoted.
+  </p>
+
+  <h4>String attributes</h4>
+
+  <p>
+   String attributes allow us to create attributes containing
+   arbitrary textual values.  This is very useful in text-mining
+   applications, as we can create datasets with string attributes,
+   then write Weka Filters to manipulate strings (like
+   StringToWordVectorFilter).  String attributes are declared as
+   follows:
+
+   </p><pre>    @ATTRIBUTE LCC    string
+   </pre>
+  <p></p>
+
+  <h4>Date attributes</h4>
+
+  <p>
+   Date attribute declarations take the form:
+
+   </p><pre>    @attribute &lt;name&gt; date [&lt;date-format&gt;]
+   </pre>
+
+   where &lt;name&gt; is the name for the attribute and
+   &lt;date-format&gt; is an optional string specifying how date
+   values should be parsed and printed (this is the same format used
+   by SimpleDateFormat). The default format string accepts the
+   ISO-8601 combined date and time format: "yyyy-MM-dd'T'HH:mm:ss".
+  <p></p>
+
+  <p>
+   Dates must be specified in the data section as the corresponding
+   string representations of the date/time (see example below). 
+  </p>
+
+  <h2>ARFF Data Section</h2>
+
+  <p>
+   The ARFF Data section of the file contains the data declaration
+   line and the actual instance lines.
+  </p>
+
+  <h3>The @data Declaration</h3>
+
+  <p>
+   The <b>@data</b> declaration is a single line denoting the start of
+   the data segment in the file.  The format is:
+   </p><pre>    @data
+   </pre>
+  <p></p>
+
+  <h3>The instance data</h3>
+
+  <p>
+   Each instance is represented on a single line, with carriage returns
+   denoting the end of the instance.
+  </p>
+
+  <p>
+   Attribute values for each instance are delimited by commas.  They
+   must appear in the order that they were declared in the header
+   section (i.e. the data corresponding to the nth <b>@attribute</b>
+   declaration is always the nth field of the attribute).
+  </p>
+
+  <p>
+   Missing values are represented by a single question mark, as in:
+
+   </p><pre>    @data
+    4.4,?,1.5,?,Iris-setosa
+   </pre>
+  <p></p>
+
+  <p>
+   Values of string and nominal attributes are case sensitive, and any
+   that contain space must be quoted, as follows:
+   </p><pre>    @relation LCCvsLCSH
+
+    @attribute LCC string
+    @attribute LCSH string
+
+    @data
+    AG5,   'Encyclopedias and dictionaries.;Twentieth century.'
+    AS262, 'Science -- Soviet Union -- History.'
+    AE5,   'Encyclopedias and dictionaries.'
+    AS281, 'Astronomy, Assyro-Babylonian.;Moon -- Phases.'
+    AS281, 'Astronomy, Assyro-Babylonian.;Moon -- Tables.'
+   </pre>
+  <p></p>
+
+  <p>
+   Dates must be specified in the data section using the string
+   representation specified in the attribute declaration.  For
+   example:
+   </p><pre>    @RELATION Timestamps
+
+    @ATTRIBUTE timestamp DATE "yyyy-MM-dd HH:mm:ss" 
+
+    @DATA 
+    "2001-04-03 12:12:12"
+    "2001-05-03 12:59:55"
+   </pre>
+  <p></p>   
+
+  <h2>Sparse ARFF files</h2>
+
+  <p>
+   Sparse ARFF files are very similar to ARFF files, but data with
+   value 0 are not be explicitly represented.
+  </p>
+
+  <p>
+   Sparse ARFF files have the same header (i.e <b>@relation</b> and
+   <b>@attribute</b> tags) but the data section is different.  Instead of
+   representing each value in order, like this:
+   </p><pre>    @data
+    0, X, 0, Y, "class A"
+    0, 0, W, 0, "class B"
+   </pre>
+   the non-zero attributes are explicitly identified by attribute
+   number and their value stated, like this:
+   <pre>    @data
+    {1 X, 3 Y, 4 "class A"}
+    {2 W, 4 "class B"}
+   </pre>
+  <p></p>
+
+  <p>
+   Each instance is surrounded by curly braces, and the format for
+   each entry is: &lt;index&gt; &lt;space&gt; &lt;value&gt; where index is the
+   attribute index (starting from 0).
+  </p>
+
+  <p>
+   Note that the omitted values in a sparse instance are <b>0</b>,
+   they are not "missing" values!  If a value is unknown,
+   you must explicitly represent it with a question mark (?).
+  </p>
+
+  <p>
+   <b>Warning</b>: There is a known problem saving SparseInstance
+   objects from datasets that have string attributes.  In Weka, string
+   and nominal data values are stored as numbers; these numbers act as
+   indexes into an array of possible attribute values (this is very
+   efficient).  However, the first string value is assigned index 0:
+   this means that, internally, this value is stored as a 0.  When a
+   SparseInstance is written, string instances with internal value 0
+   are not output, so their string value is lost (and when the arff
+   file is read again, the default value 0 is the index of a different
+   string value, so the attribute value appears to change).  To get
+   around this problem, add a dummy string value at index 0 that is
+   never used whenever you declare string attributes that are likely
+   to be used in SparseInstance objects and saved as Sparse ARFF
+   files.
+  </p>
+
+ 
+
+</body></html>
