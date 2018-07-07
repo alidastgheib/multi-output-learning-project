@@ -1,5 +1,4 @@
-# Preprocessing-for-multi-output-learning-project
-#### Convex optimization course _ Final project _ Article implementation
+# Convex Optimization Course : Final project _ Article Implementation
 
 ## Our Task: Implementation of the Following Article
 ## Metric Learning for Multi-output Tasks
